@@ -54,8 +54,10 @@ def final_prompt(qsn):
     return final_prompt
 
 
+
 answer_prompt=PromptTemplate.from_template(
-        """Given the following user question, corresponding SQL query, and SQL result, answer the user question.
+        """Given the following user question, corresponding SQL query, and SQL result, answer the user question. 
+Please note that if you find a question is not related to our table, SQL, or our database, then simply respond with: "I'm sorry. I can't answer your question."
         Question: {question}
         SQL Query: {query}
         SQL Result: {result}

@@ -1,5 +1,5 @@
 # TEXT2SQL
-# live :text2sql-ai-bot.streamlit.app
+# live : <a href="https://text2sql-ai-bot.streamlit.app/"> open</a>
 
 # schema :
 ![image](https://github.com/Sarthak3539/TEXT2SQL/assets/120930329/1e30c60c-745c-4832-b908-39db004f6ced)

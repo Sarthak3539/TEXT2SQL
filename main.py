@@ -36,13 +36,7 @@ def run_chain(qsn,messages):
    
     chain=get_chain(qsn)
     history=create_history(messages)
-    suf="""and in your first query response  give me just sql query i don't want title or other because this query directly exclued on database without any preprosesing that's way
-        Instructions: 
-        - Base your answer solely on the provided SQL Result. 
-        - Do NOT include the SQL Query in your final response. 
-        -If the question cannot be answered from the provided information or is unrelated, respond ONLY with: "I'm sorry. I can't answer your question."
-        -formulate a natural language answer to the user question using the SQL result.
-    """
+    suf="and in your first query response  give me just sql query i don't want title or other because this query directly exclued on database without any preprosesing that's way"
     response = chain.invoke({"question":qsn+"."+suf,"messages":history.messages})
     history.add_user_message(qsn)
     history.add_ai_message(response)

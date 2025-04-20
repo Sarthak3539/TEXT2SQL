@@ -28,7 +28,7 @@ LANCHAIN_API_KEY=os.getenv("LANGCHAIN_API_KEY")
  
 
 def gemini():
-    return ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+    return ChatGoogleGenerativeAI(model="gemini-1.5-pro")
 
 def connect_db():
     db=SQLDatabase.from_uri("sqlite:///database.db")

@@ -57,6 +57,13 @@ def final_prompt(qsn):
 answer_prompt=PromptTemplate.from_template(
         """Given the following user question, corresponding SQL query, and SQL result, answer the user question. 
 Please note that if you find a question is not related to our table, SQL, or our database  then simply respond with: "I'm sorry. I can't answer your question."
+       
+Instructions: 
+- Base your answer solely on the provided SQL Result. 
+- Do NOT include the SQL Query in your final response. 
+-If the question cannot be answered from the provided information or is unrelated, respond ONLY with: "I'm sorry. I can't answer your question."
+-formulate a natural language answer to the user question using the SQL result.
+
         Question: {question}
         SQL Query: {query}
         SQL Result: {result}
